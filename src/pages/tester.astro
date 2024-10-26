@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Carousell2 from "../components/Carousell2.astro";
+import SignUpTesting from "../components/SignUpTesting.astro";
+import FaqsTester from "../components/FaqsTester.astro";
+import HeroTester from "../components/HeroTester.astro";
+import HowToBeTester from "../components/HowToBeTester.astro";
+import Benefit from "../components/Benefit.astro";
+---
+
+<Layout title="Tester" path="tester">
+  <main>
+    <HeroTester />
+    <HowToBeTester />
+    <SignUpTesting />
+    <Benefit />
+    <Carousell2 />
+    <FaqsTester />
+  </main>
+</Layout>
+
+<style>
+  main {
+    line-height: 1.6;
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProblemsToSolve from "../components/ProblemsToSolve.astro";
+import FaqsDonate from "../components/FaqsDonate.astro";
+import HeroDonate from "../components/HeroDonate.astro";
+import Feedback from "../components/Feedback.astro";
+import DonationForm from "../components/DonationForm.astro";
+---
+
+<Layout title="Donate" path="donate">
+  <main>
+    <HeroDonate />
+    <DonationForm />
+    <ProblemsToSolve />
+    <FaqsDonate />
+    <Feedback />
+  </main>
+</Layout>
+
+<style>
+  main {
+    line-height: 1.6;
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<hero class="flex justify-center">
+  <div class="container lg:flex py-10 sm:py-24 px-10 gap-10">
+    <div class="w-full lg:w-1/2">
+      <h1 class="text-[32px] sm:text-[50px] font-bold mb-10">
+        {title}
+      </h1>
+      <p>
+        <span class="font-bold">Clients</span> Easily describe your desired haircut,
+        beard trim, or styling preferences. Choose your preferred time and location,
+        and review stylists based on their ratings and reviews.
+      </p>
+      <p>
+        <span class="font-bold">Providers</span> review and respond to service requests
+        from clients. View request details, accept or decline appointments, and communicate
+        with clients directly.
+      </p>
+      <a
+        href="https://drive.google.com/file/d/1DBnLgn6KKSGJYK8ArvuEbYSN8Szg7Cuw/view?usp=sharing"
+        target="_blank"
+        class="inline-block text-sm px-6 py-4 mb-6 leading-none border rounded-md text-white bg-gradient-to-r from-[#4528DC] to-[#8731E8] mt-5 ml-4"
+        >Download</a
+      >
+    </div>
+    <div class="w-full lg:w-1/2 flex justify-center">
+      <img src="/app.webp" alt="" width="500" height="" />
+    </div>
+  </div>
+</hero>
+
+<style>
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+</style>

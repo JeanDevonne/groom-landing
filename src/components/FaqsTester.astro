@@ -1,0 +1,276 @@
+<section class="flex justify-center bg-[#fff]">
+  <div class="container py-16 sm:py-28 px-10">
+    <div class="flex flex-col items-center mb-16">
+      <p class="text-[26px] sm:text-[48px] font-bold text-center">
+        Groom Early Tester FAQs
+      </p>
+      <div class="w-20 h-1 bg-[#7C4FE0] mt-2 mb-2"></div>
+      <p class="max-w-[650px] text-center">
+        Thank you for joining the Groom Early Tester Program! Your feedback is
+        invaluable to us.
+      </p>
+    </div>
+
+    <div class="dropdown-container">
+      <header class="clearfix">
+        <h1>What is the purpose of the Early Tester Program?</h1>
+        <img class="expand" src="/arrow.png" alt="" />
+      </header>
+      <article>
+        <div class="article-inner">
+          <p>
+            As an early tester, you'll have exclusive access to Groom and the
+            opportunity to provide valuable feedback that will help us shape the
+            app's future.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="dropdown-container">
+      <header class="clearfix">
+        <h1>What are the benefits of being an Early Tester?</h1>
+        <img class="expand" src="/arrow.png" alt="" />
+      </header>
+      <article>
+        <div class="article-inner">
+          <p>
+            Early access to Groom's features and functionality. Early providers
+            will be featured for 6 months. The chance to contribute to the
+            development of a revolutionary platform.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="dropdown-container">
+      <header class="clearfix">
+        <h1>How long will the Early Tester Program last</h1>
+        <img class="expand" src="/arrow.png" alt="" />
+      </header>
+      <article>
+        <div class="article-inner">
+          <p>The program will last approximately 60 days.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="dropdown-container">
+      <header class="clearfix">
+        <h1>Can I share my experience with others?</h1>
+        <img class="expand" src="/arrow.png" alt="" />
+      </header>
+      <article>
+        <div class="article-inner">
+          <p>
+            Yes, you can share your experiences with friends and family on
+            social media or through word-of-mouth. However, please avoid sharing
+            any confidential information that may be shared with you about the
+            app.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="dropdown-container">
+      <header class="clearfix">
+        <h1>What devices is Groom compatible with?</h1>
+        <img class="expand" src="/arrow.png" alt="" />
+      </header>
+      <article>
+        <div class="article-inner">
+          <p>
+            Currently, Groom is available for Android devices. We plan to expand
+            compatibility to iOS in the near future.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="dropdown-container">
+      <header class="clearfix">
+        <h1>How do I download the Groom app?</h1>
+        <img class="expand" src="/arrow.png" alt="" />
+      </header>
+      <article>
+        <div class="article-inner">
+          <p>
+            We'll provide you with a link to download the beta version of the
+            app.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="dropdown-container">
+      <header class="clearfix">
+        <h1>Are there any limitations or bugs in the beta version?</h1>
+        <img class="expand" src="/arrow.png" alt="" />
+      </header>
+      <article>
+        <div class="article-inner">
+          <p>
+            Yes, there may be some bugs or limitations in the beta version. Your
+            feedback will help us identify and address these issues.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="dropdown-container">
+      <header class="clearfix">
+        <h1>How can I provide feedback?</h1>
+        <img class="expand" src="/arrow.png" alt="" />
+      </header>
+      <article>
+        <div class="article-inner">
+          <p>
+            You can provide feedback through the in-app feedback form or by
+            contacting our support team.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="dropdown-container">
+      <header class="clearfix">
+        <h1>What kind of feedback is helpful?</h1>
+        <img class="expand" src="/arrow.png" alt="" />
+      </header>
+      <article>
+        <div class="article-inner">
+          <p>
+            Share your thoughts on the app's features, usability, and overall
+            experience. <br /> Report any bugs or issues you encounter. <br />
+            Suggest improvements or new features.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .clearfix {
+    height: 50px;
+    position: relative;
+  }
+
+  .dropdown-container {
+    max-width: 650px;
+    min-width: 300px;
+    margin: 0rem auto;
+    border-bottom: 1px solid #e9e9e9;
+    background-color: white;
+    color: #888;
+    overflow: hidden;
+  }
+
+  .dropdown-container {
+    background-color: white;
+  }
+
+  .dropdown-container header {
+    cursor: pointer;
+    padding: 0.8rem;
+    background-color: #fff;
+    color: #000;
+    transition: background-color 350ms ease-in-out;
+  }
+
+  .dropdown-container.open header {
+    background-color: #fff;
+  }
+
+  .dropdown-container h1 {
+    font-weight: 500;
+  }
+
+  .dropdown-container .expand {
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    transform: rotate(0deg);
+    font-size: 1.8em;
+    transition: transform 350ms ease-in-out;
+  }
+
+  .dropdown-container.open .expand {
+    transform: rotate(90deg);
+  }
+
+  .dropdown-container article {
+    max-height: 0px;
+    overflow: hidden;
+    line-height: 1.6;
+    transition: max-height 350ms ease-in-out;
+  }
+
+  /* padding can't be on article element because it won't collapse properly, add wrapper around contents */
+  .dropdown-container .article-inner {
+    padding: 1rem;
+  }
+
+  @media (max-width: 800px) {
+    .clearfix {
+      height: auto;
+    }
+  }
+</style>
+<script>
+  var headers = document.querySelectorAll(".dropdown-container header");
+
+  for (var i = 0; i < headers.length; i++) {
+    headers[i].addEventListener("click", openCurrAccordion);
+  }
+
+  //Use this as the callback if you would like multiple dropdowns to be open
+  function openAccordion(e) {
+    var parent = this.parentElement;
+    var article = this.nextElementSibling;
+
+    if (!parent.classList.contains("open")) {
+      parent.classList.add("open");
+      article.style.maxHeight = article.scrollHeight + "px";
+    } else {
+      parent.classList.remove("open");
+      article.style.maxHeight = "0px";
+    }
+  }
+
+  //Use this as the callback if you would like no more than one dropdown to be open
+  function openCurrAccordion(e) {
+    for (var i = 0; i < headers.length; i++) {
+      var parent = headers[i].parentElement;
+      var article = headers[i].nextElementSibling as HTMLElement;
+
+      if (this === headers[i] && !parent.classList.contains("open")) {
+        parent.classList.add("open");
+        article.style.maxHeight = article.scrollHeight + "px";
+      } else {
+        parent.classList.remove("open");
+        article.style.maxHeight = "0px";
+      }
+    }
+  }
+
+  //Notes:
+  /* Adding the 'open' class to the dropdown allows us to create
+   * easier stylings for the different components of the dropdown.
+   * It basically acts as a way to style based on the state (open/closed).
+   * The maxHeight style transition is the base functionality.
+   *
+   * Change the callback in line 4 to either openCurrAccordion or openAccordion
+   * to see the two different behaviors commented above each function
+   */
+
+  //More Advanced Notes:
+  /* If you had a nav menu with defined heights you could use the checkbox trick
+   * common with mobile nav menus. However, height cannot be transitioned so we
+   * use max-height. In addition, transitioning max-height to a percentage doesn't
+   * function properly, we need to use javascript to find the height and set it as
+   * a pixel value. If you have a pre-determined height for your dropdowns, you
+   * could implement a version without javascript. Javascript does allow us a
+   * little more flexibility in this instance.
+   */
+</script>

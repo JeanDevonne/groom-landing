@@ -1,0 +1,93 @@
+<section class="flex justify-center bg-[#fff]">
+  <div class="container pt-10 pb-20 sm:py-28 px-10">
+    <div class="flex flex-col items-center mb-16">
+      <p class="text-[30px] sm:text-[48px] font-bold text-center">
+        Simple & Beautiful Interface
+      </p>
+      <div class="w-20 h-1 bg-[#7C4FE0] mt-2 mb-2"></div>
+      <p class="max-w-[650px] text-center">
+        This custom design is meant to impress and provide the best possible
+        interface for clients and providers.
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <div
+        id="intro"
+        class="glide w-[100%] max-w-[300px] sm:max-w-[600px] md:max-w-[800px] xl:max-w-[1000px]"
+      >
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide flex justify-center">
+              <img src="/carousel/Tabpanel-2.webp" alt="" />
+            </li>
+            <li class="glide__slide flex justify-center">
+              <img src="/carousel/Tabpanel-3.webp" alt="" />
+            </li>
+            <li class="glide__slide flex justify-center">
+              <img src="/carousel/Tabpanel-4.webp" alt="" />
+            </li>
+            <li class="glide__slide flex justify-center">
+              <img src="/carousel/Tabpanel-5.webp" alt="" />
+            </li>
+            <li class="glide__slide flex justify-center">
+              <img src="/carousel/Tabpanel-2.webp" alt="" />
+            </li>
+          </ul>
+        </div>
+
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0" aria-label="Slide 1"
+          ></button>
+          <button class="glide__bullet" data-glide-dir="=1" aria-label="Slide 2"
+          ></button>
+          <button class="glide__bullet" data-glide-dir="=2" aria-label="Slide 3"
+          ></button>
+          <button class="glide__bullet" data-glide-dir="=3" aria-label="Slide 4"
+          ></button>
+          <button class="glide__bullet" data-glide-dir="=4" aria-label="Slide 1"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .glide__bullets {
+    bottom: -3em;
+  }
+  .glide__bullet {
+    background-color: #c8c8c8;
+    box-shadow: none;
+    height: 12px;
+    width: 12px;
+    margin: 8px;
+  }
+  .glide__bullet--active {
+    background-color: #7c4fe0;
+  }
+  .glide__bullet--active {
+    box-shadow: 0 0 0.4em 0 #7c4fe0;
+  }
+</style>
+<script>
+  import Glide from "@glidejs/glide/dist/glide.min.js";
+  var glide = new Glide("#intro", {
+    type: "carousel",
+    perView: 4,
+    focusAt: "0",
+    breakpoints: {
+      1024: {
+        perView: 3,
+      },
+      800: {
+        perView: 2,
+      },
+      600: {
+        perView: 1,
+      },
+    },
+  });
+
+  // Initialize on first load
+  glide.mount();
+</script>
