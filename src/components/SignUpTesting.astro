@@ -55,7 +55,7 @@
 </style>
 <script>
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbzmoDG5s1apmrmuB7k4doGt7bNJkMXUBmg1Xa079LuqaBllVFfZhrBYqpUUF16Fci9I/exec";
+    "https://script.google.com/macros/s/AKfycbwqLIMKQBRhmZtK64wVUmGf95RVNHp4e-Tdf1tFHkcHqtizNSYENU2DulKTsxfBwRmh/exec";
 
   let BecomeTesterDialog = document.getElementById(
     "becomeTesterDialog"
@@ -105,7 +105,7 @@
   // Función para validar teléfono o correo
   function validateInput(value) {
     const phoneRegex =
-      /^\+?\d{1,3}?[-.\s]?(\(?\d{1,4}\)?)[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/; // Asume que un teléfono válido es de 10 dígitos
+      /^(?:\+1\s?)?(?:\(\d{3}\)|\d{3})(?:[-.\s]?\d{3})(?:[-.\s]?\d{4})$/; // Asume que un teléfono válido es de 10 dígitos
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Formato básico para validar correos
     contactInput.classList.toggle(
       "border-red-500",
