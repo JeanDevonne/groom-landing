@@ -179,6 +179,12 @@
           Other Amount
         </label>
       </div>
+      <input
+        type="number"
+        id="amount"
+        value="35"
+        class="hidden rounded-md outline-1 outline-indigo-500 border border-[#AAAAAA] p-1 mb-4"
+      />
       <p class="text-[24px] font-bold mb-4">Enter your information:</p>
       <div
         class="w-full grid gap-0 sm:gap-4 grid-cols-[1fr] md:gap-6 md:grid-cols-[140px_1fr_140px_1fr] items-center"
@@ -345,8 +351,6 @@
   }
 </style>
 <script>
-  // Object
-
   // Donation Once or Monthly Switch
   let onceDonationBtn = document.getElementById(
     "onceDonationBtn"
@@ -446,6 +450,7 @@
       zip: (document.getElementById("zip") as HTMLInputElement).value,
       country: (document.getElementById("country") as HTMLInputElement).value,
       email: (document.getElementById("email2") as HTMLInputElement).value,
+      amount: (document.getElementById("amount") as HTMLInputElement).value,
     };
 
     let donationUrl = (
@@ -540,4 +545,67 @@
   zipInput.addEventListener("input", validateForm);
   countryInput.addEventListener("input", validateForm);
   emailInput2.addEventListener("input", validateForm);
+
+  // Validar cada vez que cambia un Monto
+  let amount = document.getElementById("amount") as HTMLInputElement;
+
+  let o35 = document.getElementById("o35") as HTMLInputElement;
+  let o50 = document.getElementById("o50") as HTMLInputElement;
+  let o100 = document.getElementById("o100") as HTMLInputElement;
+  let o250 = document.getElementById("o250") as HTMLInputElement;
+  let o500 = document.getElementById("o500") as HTMLInputElement;
+
+  o35.addEventListener("click", () => {
+    amount.value = "35";
+    amount.classList.add("hidden");
+  });
+  o50.addEventListener("click", () => {
+    amount.value = "50";
+    amount.classList.add("hidden");
+  });
+  o100.addEventListener("click", () => {
+    amount.value = "100";
+    amount.classList.add("hidden");
+  });
+  o250.addEventListener("click", () => {
+    amount.value = "250";
+    amount.classList.add("hidden");
+  });
+  o500.addEventListener("click", () => {
+    amount.value = "500";
+    amount.classList.add("hidden");
+  });
+
+  let m35 = document.getElementById("m35") as HTMLInputElement;
+  let m50 = document.getElementById("m50") as HTMLInputElement;
+  let m100 = document.getElementById("m100") as HTMLInputElement;
+  let m250 = document.getElementById("m250") as HTMLInputElement;
+  let m500 = document.getElementById("m500") as HTMLInputElement;
+
+  m35.addEventListener("click", () => {
+    amount.value = "35";
+    amount.classList.add("hidden");
+  });
+  m50.addEventListener("click", () => {
+    amount.value = "50";
+    amount.classList.add("hidden");
+  });
+  m100.addEventListener("click", () => {
+    amount.value = "100";
+    amount.classList.add("hidden");
+  });
+  m250.addEventListener("click", () => {
+    amount.value = "250";
+    amount.classList.add("hidden");
+  });
+  m500.addEventListener("click", () => {
+    amount.value = "500";
+    amount.classList.add("hidden");
+  });
+
+  let openAmount = document.getElementById("openAmount") as HTMLInputElement;
+  openAmount.addEventListener("click", () => {
+    amount.classList.remove("hidden");
+    amount.value = "";
+  });
 </script>
